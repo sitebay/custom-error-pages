@@ -55,13 +55,13 @@ custom-error-pages supports 404, 500, 503 and 5xx error codes.
 ## Getting started - Locally `go get`
 
 ```bash
-go get github.com/181192/custom-error-pages && custom-error-pages
+go get github.com/sitebay/custom-error-pages && custom-error-pages
 ```
 
 ## Getting started - Locally docker
 
 ```bash
-docker run --rm -p 8080:8080 ghcr.io/181192/custom-error-pages
+docker run --rm -p 8080:8080 ghcr.io/sitebay/custom-error-pages
 ```
 
 Or build locally
@@ -84,7 +84,7 @@ controller:
 defaultBackend:
   enabled: true
   image:
-    repository: ghcr.io/181192/custom-error-pages
+    repository: ghcr.io/sitebay/custom-error-pages
     tag: latest
   # optional: change path to theme
   extraEnvs:

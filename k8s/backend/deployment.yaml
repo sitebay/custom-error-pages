@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: ingress-nginx-default-backend
-          image: ghcr.io/181192/custom-error-pages
+          image: ghcr.io/sitebay/custom-error-pages
           imagePullPolicy: IfNotPresent
           env: 
             - name: ERROR_FILES_PATH

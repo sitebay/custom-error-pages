@@ -7,8 +7,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/181192/custom-error-pages/pkg/metrics"
-	"github.com/181192/custom-error-pages/pkg/util"
+	"github.com/sitebay/custom-error-pages/pkg/metrics"
+	"github.com/sitebay/custom-error-pages/pkg/util"
 	"github.com/oxtoacart/bpool"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
