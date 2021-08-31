@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	"github.com/181192/custom-error-pages/pkg/handlers"
-	"github.com/181192/custom-error-pages/pkg/util"
+	"github.com/sitebay/custom-error-pages/pkg/handlers"
+	"github.com/sitebay/custom-error-pages/pkg/util"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
 )
