@@ -27,7 +27,53 @@
       </svg>
     </p>
     <h3>{{ .Code }}</h3>
+    <form style="display: none;" class="vertical-form" id="auth" accept-charset="UTF-8">
+
+      <legend>
+      Authenticate
+      </legend> 
+      <div class="form-group form-group flt-name-input FloatLabel is-active">
+          
+          <div class="row">
+              <div class="col-xs-6">
+                  <label for="email" class="control-label FloatLabel-label">Email</label>
+              </div>
+          </div>
+          <input class="form-control" id="user" name="user" required="" tabindex="210" type="text" value="sitebay">
+          
+      </div>
+  
+      <div class="form-group form-group flt-name-input FloatLabel is-active">
+          
+              
+          <label for="password" class="control-label FloatLabel-label">Password</label>
+          
+          <input class="form-control Input--floatLabel FloatLabel-input" id="password" name="password" required="" tabindex="230" type="password" value="">
+          
+      </div>
+  
+      <input id="submit"  onClick="authSubmit()" type="submit" class="btn btn-default btn-primary btn-auth" value="Login" tabindex="280">
+      
+    </form>
     <p class="description">{{ .Title }}</p>
 </div>
+<script>
+const status = {{ .Code }};
+if (status === 401) {
+  document.body.className += " login";
+  var elem = document.querySelector('#auth');
+  elem.style.display = 'block';
+} else if (status === 503) {
+  var description = document.querySelector('#description');
+  description.html('Your site is being created! Please wait a few minutes.')
+}
+
+function authSubmit() {
+  var username = document.querySelector('#username');
+  var password = document.querySelector('#password');
+  window.location = 'https://' + username + ':' + password + '@' + window.location.hostname;
+
+}
+</script>
 </body></html>
 {{ end }}
