@@ -1,4 +1,4 @@
-module github.com/181192/custom-error-pages
+module github.com/sitebay/custom-error-pages
 
 go 1.15
 
